@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  logrotate_service:
+    build: .
+    volumes:
+      - ${PATH_TO_LOG_DIR}:/logs/
+    environment:
+      - ROTATE_MODE=${ROTATE_MODE}
